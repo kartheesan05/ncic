@@ -362,20 +362,41 @@ export default function Home() {
                 About The Conference
               </motion.h2>
               <motion.div 
-                className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-8"
+                className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-12"
                 variants={fadeIn}
               ></motion.div>
-              <motion.p 
-                className="text-lg text-gray-700 leading-relaxed"
+              <motion.div 
+                className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6"
                 variants={fadeIn}
               >
-                The International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and
-                Engineering (ICICRCET) is an annual event that brings together researchers, scholars, and industry experts in Computer Science and
-                Engineering. Organized by Sri Venkateswara College of Engineering in association with the AIMST University, the conference provides
-                a platform for presenting innovative research, fostering industry-academia collaboration, and enhancing skill development among
-                students and faculty. The conference is conducted by CSE Department, SVCE, and hosted by Know-I, a Machine Learning club, known
-                for promoting research and innovation in AI and emerging technologies.
-              </motion.p>
+                <p className="text-lg md:text-xl font-light leading-relaxed">
+                  The <span className="font-medium text-blue-700">International Conference on Innovative Computing Research and Cutting Edge Technologies</span> in Computer Science and
+                  Engineering (ICICRCET) is an annual event that brings together researchers, scholars, and industry experts in Computer Science and
+                  Engineering.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Organized by <span className="font-medium text-blue-700">Sri Venkateswara College of Engineering</span> in association with the <span className="font-medium text-blue-700">AIMST University</span>, the conference provides
+                  a platform for:
+                </p>
+                <ul className="list-none space-y-3 pl-0">
+                  <li className="flex items-center text-lg">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Presenting innovative research
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Fostering industry-academia collaboration
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Enhancing skill development among students and faculty
+                  </li>
+                </ul>
+                <p className="text-lg leading-relaxed">
+                  The conference is conducted by <span className="font-medium text-blue-700">CSE Department, SVCE</span>, and hosted by <span className="font-medium text-blue-700">Know-I</span>, a Machine Learning club, known
+                  for promoting research and innovation in AI and emerging technologies.
+                </p>
+              </motion.div>
             </div>
             
             <motion.div 
