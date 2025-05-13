@@ -725,14 +725,14 @@ export default function Home() {
                 >
                   {[
                     {
-                      name: "Prof. Robert Williams",
-                      role: "Chairman, SVCE",
-                      description: "Leading SVCE's vision for innovation and academic excellence in engineering education."
+                      name: "Dr. A. C. Muthiah",
+                      role: "Chairman, Governing Council, SVCE",
+                      description: "Leading SVCE's vision for excellence in engineering education and research."
                     },
                     {
-                      name: "Dr. Jennifer Lee",
-                      role: "Vice Chancellor, SVCE",
-                      description: "Spearheading academic and research initiatives at SVCE with over 25 years of experience."
+                      name: "Dr. M. Sivanandham, Ph.D",
+                      role: "Secretary, SVEHT",
+                      description: "Guiding the strategic development and growth of SVCE."
                     }
                   ].map((patron, i) => (
                     <motion.div 
@@ -742,11 +742,11 @@ export default function Home() {
                       whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
                     >
                       <motion.div 
-                        className="w-24 h-24 rounded-full overflow-hidden mb-4"
+                        className="w-32 h-32 rounded-full overflow-hidden mb-4"
                         whileHover={{ scale: 1.05 }}
                       >
                         <Image 
-                          src="/placeholder-person.jpg" 
+                          src={`/chiefpatron${i + 1}.jpg`}
                           alt={patron.name} 
                           width={100} 
                           height={100}
@@ -785,141 +785,219 @@ export default function Home() {
                 </motion.div>
               </motion.div>
               
-              {/* Committee members */}
-              {[
-                {
-                  role: "Conference Chair",
-                  bgColor: "bg-blue-100",
-                  textColor: "text-blue-700",
-                  name: "Dr. Michael Chen",
-                  position: "Professor, Computer Science",
-                  description: "Specializing in AI and distributed systems with publications in top journals."
-                },
-                {
-                  role: "Program Chair",
-                  bgColor: "bg-indigo-100",
-                  textColor: "text-indigo-700",
-                  name: "Dr. Sophia Rodriguez",
-                  position: "Associate Professor, CSE",
-                  description: "Expert in machine learning and data analytics with industry collaborations."
-                },
-                {
-                  role: "Technical Chair",
-                  bgColor: "bg-purple-100",
-                  textColor: "text-purple-700",
-                  name: "Dr. James Wilson",
-                  position: "Professor, Computer Science",
-                  description: "Researcher in cybersecurity and network systems with multiple patents."
-                },
-                {
-                  role: "Publication Chair",
-                  bgColor: "bg-emerald-100",
-                  textColor: "text-emerald-700",
-                  name: "Dr. Emily Zhang",
-                  position: "Assistant Professor, CSE",
-                  description: "Focused on IoT and embedded systems with several international collaborations."
-                },
-                {
-                  role: "Publicity Chair",
-                  bgColor: "bg-rose-100",
-                  textColor: "text-rose-700",
-                  name: "Dr. David Kumar",
-                  position: "Associate Professor, CSE",
-                  description: "Expert in human-computer interaction and augmented reality applications."
-                },
-                {
-                  role: "Finance Chair",
-                  bgColor: "bg-amber-100",
-                  textColor: "text-amber-700",
-                  name: "Dr. Lisa Wang",
-                  position: "Professor, Information Systems",
-                  description: "Specializing in information systems management and digital transformation."
-                }
-              ].map((member, i) => (
+              {/* Patron Section */}
+              <motion.div 
+                className="col-span-full mb-12"
+                variants={fadeIn}
+              >
+                <h3 className="text-xl font-bold text-center mb-8 text-gray-800">Patron</h3>
                 <motion.div 
-                  key={i}
-                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center"
-                  variants={cardVariant}
-                  whileHover={{ 
-                    y: -5, 
-                    boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" 
-                  }}
+                  className="max-w-lg mx-auto"
+                  variants={staggerContainer}
                 >
                   <motion.div 
-                    className={`inline-block ${member.bgColor} ${member.textColor} rounded-full px-3 py-1 text-xs font-medium mb-4`}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ 
-                      type: "spring",
-                      stiffness: 260,
-                      damping: 20,
-                      delay: 0.1
-                    }}
-                    viewport={{ once: true }}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center"
+                    variants={cardVariant}
+                    whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
                   >
-                    {member.role}
+                    <motion.div 
+                      className="w-32 h-32 rounded-full overflow-hidden mb-4"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Image 
+                        src="/patron1.jpg"
+                        alt="Prof. S.Ganesh Vaidyanathan" 
+                        width={100} 
+                        height={100}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                    <motion.h4 
+                      className="text-xl font-semibold mb-1 text-gray-800"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                      viewport={{ once: true }}
+                    >
+                      Prof. S.Ganesh Vaidyanathan, M.E., Ph.D
+                    </motion.h4>
+                    <motion.p 
+                      className="text-blue-700 font-medium mb-2"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      Principal, SVCE
+                    </motion.p>
+                    <motion.p 
+                      className="text-gray-600 text-sm"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.4 }}
+                      viewport={{ once: true }}
+                    >
+                      Leading SVCE's academic excellence and institutional development
+                    </motion.p>
                   </motion.div>
-                  <motion.div 
-                    className="w-20 h-20 rounded-full overflow-hidden mb-4"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <Image 
-                      src="/placeholder-person.jpg" 
-                      alt={member.name} 
-                      width={100} 
-                      height={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                  <motion.h4 
-                    className="text-lg font-semibold mb-1 text-gray-800"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    {member.name}
-                  </motion.h4>
-                  <motion.p 
-                    className="text-blue-700 mb-2 text-sm"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    {member.position}
-                  </motion.p>
-                  <motion.p 
-                    className="text-gray-600 text-sm"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                    viewport={{ once: true }}
-                  >
-                    {member.description}
-                  </motion.p>
                 </motion.div>
-              ))}
-            </motion.div>
-            
-            <motion.div 
-              className="text-center mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <motion.a 
-                href="#" 
-                className="inline-flex items-center text-blue-700 font-medium hover:text-blue-800 transition-colors"
-                whileHover={{ x: 5 }}
-                whileTap={{ scale: 0.95 }}
+              </motion.div>
+
+              {/* Convenors Section */}
+              <motion.div 
+                className="col-span-full mb-12"
+                variants={fadeIn}
               >
-                <span>View Full Committee</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 ml-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </motion.a>
+                <h3 className="text-xl font-bold text-center mb-8 text-gray-800">Convenors</h3>
+                <motion.div 
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto"
+                  variants={staggerContainer}
+                >
+                  {[
+                    {
+                      name: "Dr. R. Anitha",
+                      qualification: "M.E., Ph.D",
+                      role: "HoD/CSE",
+                      description: "Leading the Department of Computer Science and Engineering"
+                    },
+                    {
+                      name: "Dr. N. Rajganesh",
+                      qualification: "M.E., Ph.D",
+                      role: "AHoD/CSE",
+                      description: "Supporting departmental initiatives and academic programs"
+                    }
+                  ].map((convenor, i) => (
+                    <motion.div 
+                      key={i}
+                      className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center"
+                      variants={cardVariant}
+                      whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
+                    >
+                      <motion.div 
+                        className="w-28 h-28 rounded-full overflow-hidden mb-4"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Image 
+                          src={`/convenor${i + 1}.jpg`}
+                          alt={convenor.name} 
+                          width={100} 
+                          height={100}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.div>
+                      <motion.h4 
+                        className="text-lg font-semibold mb-1 text-gray-800"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true }}
+                      >
+                        {`${convenor.name}, ${convenor.qualification}`}
+                      </motion.h4>
+                      <motion.p 
+                        className="text-blue-700 mb-2 text-sm"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                        viewport={{ once: true }}
+                      >
+                        {convenor.role}
+                      </motion.p>
+                      <motion.p 
+                        className="text-gray-600 text-sm"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                        viewport={{ once: true }}
+                      >
+                        {convenor.description}
+                      </motion.p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
+
+              {/* Faculty Co-ordinators Section */}
+              <motion.div 
+                className="col-span-full"
+                variants={fadeIn}
+              >
+                <h3 className="text-xl font-bold text-center mb-8 text-gray-800">Faculty Co-ordinators</h3>
+                <motion.div 
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                  variants={staggerContainer}
+                >
+                  {[
+                    {
+                      name: "Ms. R. K. Kapila Vani",
+                      qualification: "M.E., (Ph.D)",
+                      role: "Asst. Professor/CSE"
+                    },
+                    {
+                      name: "Mr. P. Selvamani",
+                      qualification: "M.E., (Ph.D)",
+                      role: "Asst. Professor/CSE"
+                    },
+                    {
+                      name: "Ms. V. Radha",
+                      qualification: "M.E., (Ph.D)",
+                      role: "Asst. Professor/CSE"
+                    },
+                    {
+                      name: "Mr. V. Krishnamoorthy",
+                      qualification: "M.E., (Ph.D)",
+                      role: "Asst. Professor/CSE"
+                    }
+                  ].map((coordinator, i) => (
+                    <motion.div 
+                      key={i}
+                      className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center"
+                      variants={cardVariant}
+                      whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
+                    >
+                      <motion.div 
+                        className="w-24 h-24 rounded-full overflow-hidden mb-4"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Image 
+                          src={`/coordinator${i + 1}.jpg`}
+                          alt={coordinator.name} 
+                          width={100} 
+                          height={100}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.div>
+                      <motion.h4 
+                        className="text-lg font-semibold mb-1 text-gray-800"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true }}
+                      >
+                        {coordinator.name}
+                      </motion.h4>
+                      <motion.p 
+                        className="text-blue-700 mb-1 text-sm"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                        viewport={{ once: true }}
+                      >
+                        {coordinator.qualification}
+                      </motion.p>
+                      <motion.p 
+                        className="text-gray-600 text-sm"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                        viewport={{ once: true }}
+                      >
+                        {coordinator.role}
+                      </motion.p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
             </motion.div>
           </div>
         </motion.section>
