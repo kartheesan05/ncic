@@ -70,7 +70,7 @@ export default function Home() {
           >
             <Image 
               src="/logo.png" 
-              alt="NCICRCET'25 Logo" 
+              alt="ICICRCET'25 Logo" 
               width={180} 
               height={50} 
               className="h-12 w-auto" 
@@ -183,7 +183,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  NCICRCET<span className="text-blue-700">'25</span>
+                  ICICRCET<span className="text-blue-700">'25</span>
                 </motion.h1>
                 
                 <motion.h2 
@@ -192,7 +192,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  2nd National Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering
+                  2nd International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering
                 </motion.h2>
                 
                 <motion.div 
@@ -318,8 +318,8 @@ export default function Home() {
                 className="text-lg text-gray-700 leading-relaxed"
                 variants={fadeIn}
               >
-                Join us for the 2nd National Conference on Innovative Computing Research and Cutting Edge Technologies 
-                in Computer Science and Engineering (NCICRCET'25), hosted by SVCE. This premier event brings together 
+                Join us for the 2nd International Conference on Innovative Computing Research and Cutting Edge Technologies 
+                in Computer Science and Engineering (ICICRCET'25), hosted by SVCE. This premier event brings together 
                 leading researchers, industry experts, and academics to explore the latest advancements in computing 
                 technologies and foster collaborative innovation.
               </motion.p>
@@ -394,8 +394,7 @@ export default function Home() {
                 className="text-lg text-gray-700 leading-relaxed"
                 variants={fadeIn}
               >
-                Explore cutting-edge research across various domains of computer science and engineering.
-                Submit your papers to any of the following tracks.
+                The conference invites original contributions in the following tracks, but not limited to:
               </motion.p>
             </div>
             
@@ -407,34 +406,66 @@ export default function Home() {
             >
               {[
                 {
-                  title: "Artificial Intelligence & Machine Learning",
+                  title: "Track 1: Computational Intelligence",
                   color: "blue",
-                  items: ["Deep Learning Architectures", "Natural Language Processing", "Computer Vision & Pattern Recognition", "Reinforcement Learning"]
+                  items: [
+                    "Artificial Intelligence",
+                    "Machine Learning",
+                    "Deep Learning",
+                    "Natural Language Processing",
+                    "Computational optimization",
+                    "Robotics",
+                    "Text Mining",
+                    "Web Mining",
+                    "Visualization Techniques"
+                  ]
                 },
                 {
-                  title: "Data Science & Big Data Analytics",
+                  title: "Track 2: Ambient Intelligence",
                   color: "indigo",
-                  items: ["Big Data Frameworks & Tools", "Predictive Analytics", "Data Visualization", "Data Mining Techniques"]
+                  items: [
+                    "Data Science & Data Analytics",
+                    "Smart Cities",
+                    "Affective Computing",
+                    "Context aware pervasive systems",
+                    "Intelligent Transportation"
+                  ]
                 },
                 {
-                  title: "Cloud Computing & Distributed Systems",
+                  title: "Track 3: Security",
                   color: "purple",
-                  items: ["Cloud Architectures & Services", "Edge & Fog Computing", "Virtualization", "Containerization & Orchestration"]
+                  items: [
+                    "Biometrics",
+                    "Internet Security",
+                    "Cloud Security",
+                    "Secure Transactions",
+                    "Advanced Cryptography",
+                    "Cyber Security"
+                  ]
                 },
                 {
-                  title: "Cybersecurity & Privacy",
+                  title: "Track 4: Computing",
                   color: "green",
-                  items: ["Network Security", "Cryptography", "Privacy-Preserving Techniques", "Threat Intelligence"]
+                  items: [
+                    "Cloud Computing",
+                    "Edge Computing",
+                    "Quantum Computing",
+                    "High Performance Computing",
+                    "Bio-Inspired Computing",
+                    "Human Centered Computing"
+                  ]
                 },
                 {
-                  title: "Internet of Things (IoT)",
+                  title: "Track 5: Techniques & Technologies",
                   color: "red",
-                  items: ["IoT Architectures & Protocols", "Smart Environments & Cities", "IoT Security & Privacy", "Industrial IoT Applications"]
-                },
-                {
-                  title: "Software Engineering & DevOps",
-                  color: "amber",
-                  items: ["Agile & Lean Methodologies", "CI/CD Pipelines", "Software Testing & Quality", "Microservices Architecture"]
+                  items: [
+                    "Virtualization Techniques",
+                    "Computer Vision",
+                    "Human Computer Interface & BCI",
+                    "Augmented Reality / Virtual Reality",
+                    "Block Chain",
+                    "Metaverse"
+                  ]
                 }
               ].map((track, i) => (
                 <motion.div 
@@ -463,26 +494,6 @@ export default function Home() {
                   </ul>
                 </motion.div>
               ))}
-            </motion.div>
-            
-            <motion.div 
-              className="text-center mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <motion.a 
-                href="#" 
-                className="inline-flex items-center text-blue-700 font-medium hover:text-blue-800 transition-colors"
-                whileHover={{ x: 5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>View All Research Tracks</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 ml-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </motion.a>
             </motion.div>
           </div>
         </motion.section>
@@ -671,7 +682,7 @@ export default function Home() {
                 className="text-lg text-gray-700 leading-relaxed"
                 variants={fadeIn}
               >
-                Meet our dedicated team of professionals working to make NCICRCET'25 a success.
+                Meet our dedicated team of professionals working to make ICICRCET'25 a success.
               </motion.p>
             </div>
             
@@ -909,7 +920,7 @@ export default function Home() {
                 className="text-lg text-gray-700 leading-relaxed"
                 variants={fadeIn}
               >
-                Have questions about NCICRCET'25? Get in touch with our team.
+                Have questions about ICICRCET'25? Get in touch with our team.
               </motion.p>
             </div>
             
@@ -945,8 +956,8 @@ export default function Home() {
                       </svg>,
                       title: "Email",
                       subtitle: "General Inquiries",
-                      link: "mailto:ncicrcet25@svce.edu.in",
-                      linkText: "ncicrcet25@svce.edu.in"
+                      link: "mailto:icicrcet25@svce.edu.in",
+                      linkText: "icicrcet25@svce.edu.in"
                     },
                     {
                       icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1120,7 +1131,7 @@ export default function Home() {
                 <div className="flex items-center mb-4">
                   <Image 
                     src="/logo.png" 
-                    alt="NCICRCET'25 Logo" 
+                    alt="ICICRCET'25 Logo" 
                     width={180} 
                     height={50} 
                     className="h-12 w-auto bg-white p-1 rounded"
@@ -1133,7 +1144,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  The 2nd National Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering (NCICRCET'25).
+                    The 2nd International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering (ICICRCET'25).
                 </motion.p>
                 <motion.p 
                   className="text-gray-400"
@@ -1240,7 +1251,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.7 }}
               viewport={{ once: true }}
             >
-              <p className="text-gray-500 mb-4 md:mb-0">© 2025 NCICRCET. All rights reserved.</p>
+              <p className="text-gray-500 mb-4 md:mb-0">© 2025 ICICRCET. All rights reserved.</p>
               
               <motion.div 
                 className="flex space-x-6"
