@@ -174,7 +174,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  April 15-17, 2025 • SVCE Campus
+                  May 26, 2025 • Online (Google Meet)
                 </motion.div>
                 
                 <motion.h1 
@@ -1062,7 +1062,7 @@ export default function Home() {
               animate={contactInView ? "visible" : "hidden"}
             >
               <motion.div 
-                className="bg-gray-50 rounded-xl p-8 shadow-sm"
+                className="bg-gray-50 rounded-xl p-8 shadow-sm col-span-full"
                 variants={cardVariant}
                 whileHover={{ boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
               >
@@ -1087,8 +1087,8 @@ export default function Home() {
                       </svg>,
                       title: "Email",
                       subtitle: "General Inquiries",
-                      link: "mailto:icicrcet25@svce.edu.in",
-                      linkText: "icicrcet25@svce.edu.in"
+                      link: "mailto:ncrctcse@svce.ac.in",
+                      linkText: "ncrctcse@svce.ac.in"
                     },
                     {
                       icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1096,8 +1096,8 @@ export default function Home() {
                       </svg>,
                       title: "Phone",
                       subtitle: "Conference Secretariat",
-                      link: "tel:+911234567890",
-                      linkText: "+91 123 456 7890"
+                      link: "tel:044-27152000(301)",
+                      linkText: "044-27152000(301)"
                     },
                     {
                       icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1109,6 +1109,18 @@ export default function Home() {
                         "Department of Computer Science & Engineering",
                         "Sri Venkateswara College of Engineering",
                         "Chennai, Tamil Nadu, India - 602117"
+                      ]
+                    },
+                    {
+                      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>,
+                      title: "Conference Platform",
+                      address: [
+                        "Online Conference via Google Meet",
+                        "Link will be shared with registered participants",
+                        "Technical support available during the event"
                       ]
                     }
                   ].map((contact, i) => (
@@ -1172,66 +1184,6 @@ export default function Home() {
                   </div>
                 </motion.div>
               </motion.div>
-              
-              <motion.div 
-                className="bg-gray-50 rounded-xl p-8 shadow-sm"
-                variants={cardVariant}
-                whileHover={{ boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
-              >
-                <motion.h3 
-                  className="text-2xl font-bold mb-6 text-gray-800"
-                  initial={{ opacity: 0, y: -10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  viewport={{ once: true }}
-                >Send Us a Message</motion.h3>
-                
-                <motion.form 
-                  className="space-y-5"
-                  variants={staggerContainer}
-                >
-                  {[
-                    { id: "name", label: "Full Name", type: "text", placeholder: "Your name" },
-                    { id: "email", label: "Email Address", type: "email", placeholder: "Your email" },
-                    { id: "subject", label: "Subject", type: "text", placeholder: "Message subject" }
-                  ].map((field, i) => (
-                    <motion.div 
-                      key={i}
-                      variants={cardVariant}
-                    >
-                      <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">{field.label}</label>
-                      <motion.input 
-                        type={field.type} 
-                        id={field.id} 
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" 
-                        placeholder={field.placeholder}
-                        whileFocus={{ scale: 1.01, boxShadow: "0 0 0 3px rgba(59, 130, 246, 0.2)" }}
-                      />
-                    </motion.div>
-                  ))}
-                  
-                  <motion.div variants={cardVariant}>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <motion.textarea 
-                      id="message" 
-                      rows="4" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" 
-                      placeholder="Your message"
-                      whileFocus={{ scale: 1.01, boxShadow: "0 0 0 3px rgba(59, 130, 246, 0.2)" }}
-                    ></motion.textarea>
-                  </motion.div>
-                  
-                  <motion.button 
-                    type="submit" 
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-6 rounded-lg hover:shadow-lg transition duration-300"
-                    variants={cardVariant}
-                    whileHover={{ scale: 1.02, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Send Message
-                  </motion.button>
-                </motion.form>
-              </motion.div>
             </motion.div>
           </div>
         </motion.section>
@@ -1284,7 +1236,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  April 15-17, 2025 • SVCE Campus, Chennai, India
+                  May 26, 2025 • Online (Google Meet)
                 </motion.p>
               </motion.div>
               
