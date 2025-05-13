@@ -533,7 +533,7 @@ export default function Home() {
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-indigo-800 text-transparent bg-clip-text"
                 variants={fadeIn}
-              >Conference Agenda</motion.h2>
+              >Important Dates</motion.h2>
               <motion.div 
                 className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-8"
                 variants={fadeIn}
@@ -542,139 +542,102 @@ export default function Home() {
                 className="text-lg text-gray-700 leading-relaxed"
                 variants={fadeIn}
               >
-                Join us for three days of inspiring keynotes, technical presentations, workshops, and networking opportunities.
+                Key deadlines and dates for ICICRCET'25
               </motion.p>
             </div>
             
-            <div className="max-w-4xl mx-auto">
-              {/* Day 1 */}
+            <div className="max-w-4xl mx-auto relative">
+              {/* Timeline Line */}
               <motion.div 
-                className="mb-12"
+                className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 to-indigo-600"
+                initial={{ height: 0 }}
+                whileInView={{ height: "100%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              ></motion.div>
+
+              {/* Timeline Events */}
+              <motion.div 
+                className="relative space-y-24"
                 variants={staggerContainer}
                 initial="hidden"
                 animate={agendaInView ? "visible" : "hidden"}
               >
-                <motion.div 
-                  className="flex items-center mb-6"
-                  variants={fadeIn}
-                >
-                  <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <span className="font-bold">D1</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800">Day 1: April 15, 2025</h3>
-                </motion.div>
-                
-                <motion.div 
-                  className="ml-16 space-y-6"
-                  variants={staggerContainer}
-                >
-                  {[
-                    {
-                      time: "09:00 AM - 10:30 AM",
-                      title: "Opening Ceremony & Keynote Address",
-                      description: "Join us for the inaugural session with welcome address by SVCE leadership and opening keynote by a distinguished speaker.",
-                      speaker: {
-                        name: "Dr. Sarah Johnson",
-                        role: "Director of AI Research, Tech Innovations Inc."
-                      },
-                      color: "bg-blue-500"
-                    },
-                    {
-                      time: "11:00 AM - 01:00 PM",
-                      title: "Technical Session I: AI & Machine Learning",
-                      description: "Paper presentations focusing on recent advancements in artificial intelligence and machine learning applications.",
-                      color: "bg-indigo-500"
-                    },
-                    {
-                      time: "02:00 PM - 04:00 PM",
-                      title: "Workshop: Deep Learning Frameworks",
-                      description: "Hands-on workshop on implementing deep learning models using popular frameworks like TensorFlow and PyTorch.",
-                      color: "bg-green-500"
-                    },
-                    {
-                      time: "04:30 PM - 06:00 PM",
-                      title: "Panel Discussion: Future of AI in Industry",
-                      description: "Distinguished panelists discuss the impact and future directions of AI in various industry sectors.",
-                      color: "bg-purple-500"
-                    }
-                  ].map((session, i) => (
+                {[
+                  {
+                    date: "May 18, 2025",
+                    title: "Full Paper Submission Deadline",
+                    description: "Last date to submit your research papers for review",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    )
+                  },
+                  {
+                    date: "May 20, 2025",
+                    title: "Intimation of Selected Papers",
+                    description: "Authors will be notified about paper acceptance",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )
+                  },
+                  {
+                    date: "May 23, 2025",
+                    title: "Last Date for Registration",
+                    description: "Final deadline for conference registration",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                      </svg>
+                    )
+                  },
+                  {
+                    date: "May 26, 2025",
+                    title: "Conference Date",
+                    description: "Main conference day",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    )
+                  }
+                ].map((event, i) => (
+                  <motion.div 
+                    key={i}
+                    className={`flex items-center ${i % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                    variants={cardVariant}
+                  >
+                    {/* Content */}
                     <motion.div 
-                      key={i}
-                      className="bg-gray-50 rounded-xl p-6 shadow-sm relative"
-                      variants={cardVariant}
-                      whileHover={{ x: 5, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}
+                      className={`w-1/2 ${i % 2 === 0 ? 'pr-16 text-right' : 'pl-16 text-left'}`}
+                      initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                      <div className={`absolute left-0 top-0 w-1.5 h-full ${session.color} rounded-l-xl`}></div>
-                      <motion.span 
-                        className="text-sm font-medium text-blue-700"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
-                        {session.time}
-                      </motion.span>
-                      <motion.h4 
-                        className="text-xl font-semibold mt-2 mb-1"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        {session.title}
-                      </motion.h4>
-                      <motion.p 
-                        className="text-gray-600"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                        viewport={{ once: true }}
-                      >
-                        {session.description}
-                      </motion.p>
-                      {session.speaker && (
-                        <motion.div 
-                          className="mt-4 flex items-center"
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.5 }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-800">{session.speaker.name}</p>
-                            <p className="text-sm text-gray-600">{session.speaker.role}</p>
-                          </div>
-                        </motion.div>
-                      )}
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">{event.date}</h3>
+                      <h4 className="text-xl font-semibold text-blue-700 mb-2">{event.title}</h4>
+                      <p className="text-gray-600">{event.description}</p>
                     </motion.div>
-                  ))}
-                </motion.div>
-              </motion.div>
-              
-              {/* Day 2 & 3 Preview */}
-              <motion.div 
-                className="flex justify-center mt-10"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <motion.a 
-                  href="#" 
-                  className="bg-white border border-blue-200 rounded-lg px-8 py-3 text-blue-700 font-medium hover:bg-blue-50 transition flex items-center gap-2 shadow-sm"
-                  whileHover={{ scale: 1.05, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span>View Complete Schedule</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </motion.a>
+
+                    {/* Icon */}
+                    <motion.div 
+                      className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white z-10"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.3 }}
+                    >
+                      {event.icon}
+                    </motion.div>
+
+                    {/* Empty space for the other side */}
+                    <div className="w-1/2"></div>
+                  </motion.div>
+                ))}
               </motion.div>
             </div>
           </div>
