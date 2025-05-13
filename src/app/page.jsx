@@ -202,6 +202,14 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.8 }}
                 >
                   <motion.button 
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/brochure.pdf';
+                      link.download = "ICICRCET'25-Brochure.pdf";
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
                     className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-8 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300 flex items-center gap-2"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
