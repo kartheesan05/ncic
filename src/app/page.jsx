@@ -409,7 +409,9 @@ export default function Home() {
               {[
                 {
                   title: "Track 1: Computational Intelligence",
-                  color: "blue",
+                  color: "border-blue-600",
+                  bgColor: "bg-blue-100",
+                  textColor: "text-blue-700",
                   items: [
                     "Artificial Intelligence",
                     "Machine Learning",
@@ -424,7 +426,9 @@ export default function Home() {
                 },
                 {
                   title: "Track 2: Ambient Intelligence",
-                  color: "indigo",
+                  color: "border-indigo-600",
+                  bgColor: "bg-indigo-100",
+                  textColor: "text-indigo-700",
                   items: [
                     "Data Science & Data Analytics",
                     "Smart Cities",
@@ -435,7 +439,9 @@ export default function Home() {
                 },
                 {
                   title: "Track 3: Security",
-                  color: "purple",
+                  color: "border-purple-600",
+                  bgColor: "bg-purple-100",
+                  textColor: "text-purple-700",
                   items: [
                     "Biometrics",
                     "Internet Security",
@@ -447,7 +453,9 @@ export default function Home() {
                 },
                 {
                   title: "Track 4: Computing",
-                  color: "green",
+                  color: "border-emerald-600",
+                  bgColor: "bg-emerald-100",
+                  textColor: "text-emerald-700",
                   items: [
                     "Cloud Computing",
                     "Edge Computing",
@@ -459,7 +467,9 @@ export default function Home() {
                 },
                 {
                   title: "Track 5: Techniques & Technologies",
-                  color: "red",
+                  color: "border-rose-600",
+                  bgColor: "bg-rose-100",
+                  textColor: "text-rose-700",
                   items: [
                     "Virtualization Techniques",
                     "Computer Vision",
@@ -472,7 +482,7 @@ export default function Home() {
               ].map((track, i) => (
                 <motion.div 
                   key={i}
-                  className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border-l-4 border-${track.color}-600`}
+                  className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border-l-4 ${track.color}`}
                   variants={cardVariant}
                   whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
                 >
@@ -487,7 +497,7 @@ export default function Home() {
                         transition={{ delay: j * 0.1 }}
                         viewport={{ once: true }}
                       >
-                        <svg className={`w-5 h-5 text-${track.color}-600 mr-2 mt-0.5`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className={`w-5 h-5 ${track.textColor} mr-2 mt-0.5`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <span>{item}</span>
@@ -558,25 +568,25 @@ export default function Home() {
                         name: "Dr. Sarah Johnson",
                         role: "Director of AI Research, Tech Innovations Inc."
                       },
-                      color: "blue"
+                      color: "bg-blue-500"
                     },
                     {
                       time: "11:00 AM - 01:00 PM",
                       title: "Technical Session I: AI & Machine Learning",
                       description: "Paper presentations focusing on recent advancements in artificial intelligence and machine learning applications.",
-                      color: "indigo"
+                      color: "bg-indigo-500"
                     },
                     {
                       time: "02:00 PM - 04:00 PM",
                       title: "Workshop: Deep Learning Frameworks",
                       description: "Hands-on workshop on implementing deep learning models using popular frameworks like TensorFlow and PyTorch.",
-                      color: "green"
+                      color: "bg-green-500"
                     },
                     {
                       time: "04:30 PM - 06:00 PM",
                       title: "Panel Discussion: Future of AI in Industry",
                       description: "Distinguished panelists discuss the impact and future directions of AI in various industry sectors.",
-                      color: "purple"
+                      color: "bg-purple-500"
                     }
                   ].map((session, i) => (
                     <motion.div 
@@ -585,7 +595,7 @@ export default function Home() {
                       variants={cardVariant}
                       whileHover={{ x: 5, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}
                     >
-                      <div className={`absolute left-0 top-0 w-1.5 h-full bg-${session.color}-500 rounded-l-xl`}></div>
+                      <div className={`absolute left-0 top-0 w-1.5 h-full ${session.color} rounded-l-xl`}></div>
                       <motion.span 
                         className="text-sm font-medium text-blue-700"
                         initial={{ opacity: 0 }}
@@ -770,42 +780,48 @@ export default function Home() {
               {[
                 {
                   role: "Conference Chair",
-                  color: "blue",
+                  bgColor: "bg-blue-100",
+                  textColor: "text-blue-700",
                   name: "Dr. Michael Chen",
                   position: "Professor, Computer Science",
                   description: "Specializing in AI and distributed systems with publications in top journals."
                 },
                 {
                   role: "Program Chair",
-                  color: "indigo",
+                  bgColor: "bg-indigo-100",
+                  textColor: "text-indigo-700",
                   name: "Dr. Sophia Rodriguez",
                   position: "Associate Professor, CSE",
                   description: "Expert in machine learning and data analytics with industry collaborations."
                 },
                 {
                   role: "Technical Chair",
-                  color: "purple",
+                  bgColor: "bg-purple-100",
+                  textColor: "text-purple-700",
                   name: "Dr. James Wilson",
                   position: "Professor, Computer Science",
                   description: "Researcher in cybersecurity and network systems with multiple patents."
                 },
                 {
                   role: "Publication Chair",
-                  color: "green",
+                  bgColor: "bg-emerald-100",
+                  textColor: "text-emerald-700",
                   name: "Dr. Emily Zhang",
                   position: "Assistant Professor, CSE",
                   description: "Focused on IoT and embedded systems with several international collaborations."
                 },
                 {
                   role: "Publicity Chair",
-                  color: "red",
+                  bgColor: "bg-rose-100",
+                  textColor: "text-rose-700",
                   name: "Dr. David Kumar",
                   position: "Associate Professor, CSE",
                   description: "Expert in human-computer interaction and augmented reality applications."
                 },
                 {
                   role: "Finance Chair",
-                  color: "amber",
+                  bgColor: "bg-amber-100",
+                  textColor: "text-amber-700",
                   name: "Dr. Lisa Wang",
                   position: "Professor, Information Systems",
                   description: "Specializing in information systems management and digital transformation."
@@ -821,7 +837,7 @@ export default function Home() {
                   }}
                 >
                   <motion.div 
-                    className={`inline-block bg-${member.color}-100 text-${member.color}-700 rounded-full px-3 py-1 text-xs font-medium mb-4`}
+                    className={`inline-block ${member.bgColor} ${member.textColor} rounded-full px-3 py-1 text-xs font-medium mb-4`}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ 
