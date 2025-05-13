@@ -318,10 +318,12 @@ export default function Home() {
                 className="text-lg text-gray-700 leading-relaxed"
                 variants={fadeIn}
               >
-                Join us for the 2nd International Conference on Innovative Computing Research and Cutting Edge Technologies 
-                in Computer Science and Engineering (ICICRCET'25), hosted by SVCE. This premier event brings together 
-                leading researchers, industry experts, and academics to explore the latest advancements in computing 
-                technologies and foster collaborative innovation.
+                The International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and
+                Engineering (ICICRCET) is an annual event that brings together researchers, scholars, and industry experts in Computer Science and
+                Engineering. Organized by Sri Venkateswara College of Engineering in association with the AIMST University, the conference provides
+                a platform for presenting innovative research, fostering industry-academia collaboration, and enhancing skill development among
+                students and faculty. The conference is conducted by CSE Department, SVCE, and hosted by Know-I, a Machine Learning club, known
+                for promoting research and innovation in AI and emerging technologies.
               </motion.p>
             </div>
             
