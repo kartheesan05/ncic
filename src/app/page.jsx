@@ -94,7 +94,7 @@ export default function Home() {
           
           <div className="flex items-center gap-4">
             <motion.a 
-              href="#register" 
+              href="https://forms.gle/219Ekf3pHEj97wGz6" 
               className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-2 px-6 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -220,13 +220,14 @@ export default function Home() {
                     </svg>
                   </motion.button>
                   <motion.button 
+                    onClick={() => window.open('https://forms.gle/219Ekf3pHEj97wGz6', '_blank')}
                     className="bg-white text-blue-700 border border-blue-200 font-medium py-3 px-8 rounded-lg hover:shadow-md hover:bg-blue-50 transition duration-300 flex items-center gap-2"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <span>Submit Paper</span>
+                    <span>Register</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                     </svg>
                   </motion.button>
                 </motion.div>
