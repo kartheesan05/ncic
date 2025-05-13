@@ -278,25 +278,67 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <motion.div
-                  animate={{ 
-                    y: [0, -15, 0],
-                  }}
-                  transition={{ 
-                    repeat: Infinity, 
-                    duration: 4,
-                    ease: "easeInOut" 
-                  }}
-                >
-                  <Image 
-                    src="/mascot.webp" 
-                    alt="Conference logo" 
-                    width={400} 
-                    height={400}
-                    className="w-full max-w-sm drop-shadow-2xl"
-                    priority
-                  />
-                </motion.div>
+                <div className="flex items-center gap-8">
+                  {/* SVCE Logo */}
+                  <div className="flex flex-col items-center mt-15">
+                    <Image 
+                      src="/svce.png" 
+                      alt="Presented by SVCE" 
+                      width={1000} 
+                      height={1000}
+                      className="w-full max-w-full drop-shadow-2xl"
+                      priority
+                    />
+                    <motion.p
+                      className="text-xl font-semibold text-blue-700 mt-4"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5 }}
+                    >
+                      Presented by
+                    </motion.p>
+                  </div>
+
+                  {/* AIMST Logo */}
+                  <div className="flex flex-col items-center">
+                    <Image 
+                      src="/aimst.png" 
+                      alt="Knowledge Partner AIMST" 
+                      width={300} 
+                      height={300}
+                      className="w-full max-w-xs drop-shadow-2xl"
+                      priority
+                    />
+                    <motion.p
+                      className="text-xl font-semibold text-blue-700 mt-4"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5 }}
+                    >
+                      Knowledge Partner
+                    </motion.p>
+                  </div>
+
+                  {/* Know-I Logo */}
+                  <div className="flex flex-col items-center mt-15">
+                    <Image 
+                      src="/knowi.png" 
+                      alt="Hosted by Know-I" 
+                      width={300} 
+                      height={300}
+                      className="w-full max-w-xs drop-shadow-2xl rounded-2xl"
+                      priority
+                    />
+                    <motion.p
+                      className="text-xl font-semibold text-blue-700 mt-4"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5 }}
+                    >
+                      Hosted by
+                    </motion.p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
