@@ -192,7 +192,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  2nd International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering
+                  1st International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering
                 </motion.h2>
                 
                 <motion.div 
@@ -1227,7 +1227,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                    The 2nd International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering (ICICRCET'25).
+                    The 1st International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering (ICICRCET'25).
                 </motion.p>
                 <motion.p 
                   className="text-gray-400"
