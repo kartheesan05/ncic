@@ -174,7 +174,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  May 26, 2025 • Online (Google Meet)
+                  May 26, 2025 • Hybrid (Google Meet , SVCE Campus)
                 </motion.div>
                 
                 <motion.h1 
@@ -278,7 +278,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-8 pb-6">
                   {/* SVCE Logo */}
                   <div className="flex flex-col items-center mt-15">
                     <Image 
@@ -303,10 +303,10 @@ export default function Home() {
                   <div className="flex flex-col items-center">
                     <Image 
                       src="/aimst.png" 
-                      alt="Knowledge Partner AIMST" 
+                      alt="In Association with AIMST" 
                       width={300} 
                       height={300}
-                      className="w-full max-w-xs drop-shadow-2xl"
+                      className="w-full max-w-xs drop-shadow-2xl mb-5"
                       priority
                     />
                     <motion.p
@@ -315,7 +315,7 @@ export default function Home() {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.5 }}
                     >
-                      Knowledge Partner
+                      In Association with
                     </motion.p>
                   </div>
 
@@ -419,7 +419,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-gray-800">Vision</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To excel in providing education and research in the field of computer science and engineering in the cutting-edge technology so as to produce competence professional at global level
+                  To gain national and global recognition as a leader in computer science and engineering driven by innovative research, outstanding education, and the accomplishments of our learners, supported by state-of-the-art resources and a collaborative environment.
                 </p>
               </motion.div>
 
@@ -436,9 +436,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-gray-800">Mission</h3>
                 <ul className="text-gray-600 space-y-3 list-disc pl-5">
-                  <li>Providing competent and trained faculty enriching the aptitude of the student to generate innovative and effective problem solving skills with professionalism.</li>
-                  <li>Providing strong research and state of the art facility to the students to face dynamic challenges of industry and society</li>
-                  <li>Educating the students to be successful, ethical and lifelong learners</li>
+                  <li>By providing a supportive ecosystem to our learners that fosters continuous learning, education, research, and innovation in computer science and engineering.</li>
+                  <li>By enhancing the skills and virtues of our learners, enabling them to understand and address societal needs through advanced technological solutions.</li>
+                  <li>By leveraging the experiential learning in the field of computer science and engineering and cutting-edge research to develop innovative solutions for complex engineering and technological challenges at both national and global levels.</li>
                 </ul>
               </motion.div>
             </motion.div>
