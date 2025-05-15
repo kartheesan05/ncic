@@ -192,7 +192,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  1st International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science and Engineering
+                  1st International Conference on Innovative Computing Research and Cutting Edge Technologies in Computer Science organized by Department of Computer Science and Engineering, SVCE
                 </motion.h2>
                 
                 <motion.div 
@@ -370,12 +370,12 @@ export default function Home() {
                 variants={fadeIn}
               >
                 <p className="text-lg md:text-xl font-light leading-relaxed">
-                  The <span className="font-medium text-blue-700">International Conference on Innovative Computing Research and Cutting Edge Technologies</span> in Computer Science and
+                  The <span className="font-medium text-blue-700">1st International Conference on Innovative Computing Research and Cutting Edge Technologies</span> in Computer Science and
                   Engineering (ICICRCET) is an annual event that brings together researchers, scholars, and industry experts in Computer Science and
                   Engineering.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Organized by <span className="font-medium text-blue-700">Sri Venkateswara College of Engineering</span> in association with the <span className="font-medium text-blue-700">AIMST University</span>, the conference provides
+                  Organized by <span className="font-medium text-blue-700">Department of Computer Science and Engineering, Sri Venkateswara College of Engineering</span> in association with the <span className="font-medium text-blue-700">AIMST University, Malaysia</span>, the conference provides
                   a platform for:
                 </p>
                 <ul className="list-none space-y-3 pl-0">
@@ -393,7 +393,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <p className="text-lg leading-relaxed">
-                  The conference is conducted by <span className="font-medium text-blue-700">CSE Department, SVCE</span>, and hosted by <span className="font-medium text-blue-700">Know-I</span>, a Machine Learning club, known
+                  The conference is hosted by <span className="font-medium text-blue-700">Know-I</span>, a Machine Learning club, known
                   for promoting research and innovation in AI and emerging technologies.
                 </p>
               </motion.div>
