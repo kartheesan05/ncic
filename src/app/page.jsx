@@ -1096,8 +1096,8 @@ export default function Home() {
                       </svg>,
                       title: "Phone",
                       subtitle: "Conference Secretariat",
-                      link: "tel:044-27152000(301)",
-                      linkText: "044-27152000(301)"
+                      link: "tel:044-27152000(300)",
+                      linkText: "044-27152000(300)"
                     },
                     {
                       icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
