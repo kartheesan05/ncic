@@ -1111,18 +1111,18 @@ export default function Home() {
                         "Chennai, Tamil Nadu, India - 602117"
                       ]
                     },
-                    {
-                      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>,
-                      title: "Conference Platform",
-                      address: [
-                        "Online Conference via Google Meet",
-                        "Link will be shared with registered participants",
-                        "Technical support available during the event"
-                      ]
-                    }
+                    // {
+                    //   icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    //     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    //     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    //   </svg>,
+                    //   title: "Conference Platform",
+                    //   address: [
+                    //     "Online Conference via Google Meet",
+                    //     "Link will be shared with registered participants",
+                    //     "Technical support available during the event"
+                    //   ]
+                    // }
                   ].map((contact, i) => (
                     <motion.div 
                       key={i}
