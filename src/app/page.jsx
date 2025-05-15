@@ -280,17 +280,17 @@ export default function Home() {
               >
                 <div className="flex items-center gap-8 pb-6">
                   {/* SVCE Logo */}
-                  <div className="flex flex-col items-center mt-15">
+                  <div className="flex flex-col items-center pr-15 pl-15">
                     <Image 
                       src="/svce.png" 
                       alt="Presented by SVCE" 
-                      width={1000} 
-                      height={1000}
-                      className="w-full max-w-full drop-shadow-2xl"
+                      width={2000} 
+                      height={2000}
+                      className="w-full max-w-[200%] h-auto scale-160 drop-shadow-2xl" 
                       priority
                     />
                     <motion.p
-                      className="text-xl font-semibold text-blue-700 mt-4"
+                      className="text-xl font-semibold text-blue-700 pt-15"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.5 }}
@@ -320,7 +320,7 @@ export default function Home() {
                   </div>
 
                   {/* Know-I Logo */}
-                  <div className="flex flex-col items-center mt-15">
+                  {/* <div className="flex flex-col items-center mt-15">
                     <Image 
                       src="/knowi.png" 
                       alt="Hosted by Know-I" 
@@ -337,7 +337,7 @@ export default function Home() {
                     >
                       Hosted by
                     </motion.p>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </div>
