@@ -300,7 +300,7 @@ export default function Home() {
                   </div>
 
                   {/* AIMST Logo */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center pr-15 pl-15">
                     <Image 
                       src="/aimst.png" 
                       alt="In Association with AIMST" 
