@@ -1,0 +1,114 @@
+To add a **button that toggles different anatomy layers** like **skin**, **muscles**, and **skeleton** in Unity (for VR or desktop), follow these steps:
+
+---
+
+## ✅ Goal
+
+Create UI buttons (or interactable VR objects) that **show/hide GameObjects** representing different anatomy layers.
+
+---
+
+## 🎯 Step-by-Step Guide (Using UI Button)
+
+### 🧱 1. Organize Your Layers in the Hierarchy
+
+Assume you have 3 GameObjects:
+
+* `SkinLayer`
+* `MuscleLayer`
+* `SkeletonLayer`
+
+Place them under an empty GameObject (optional):
+`AnatomyModel`
+├── `SkinLayer`
+├── `MuscleLayer`
+└── `SkeletonLayer`
+
+Make sure each layer has **its own GameObject**.
+
+---
+
+### 🛠️ 2. Create UI Buttons
+
+1. In the Hierarchy:
+   Right-click → `UI > Button - TextMeshPro`
+2. Rename it to `ToggleSkinButton`, for example.
+3. Change the button text to `"Toggle Skin"`
+4. Repeat for `ToggleMuscleButton` and `ToggleSkeletonButton`
+
+---
+
+### 🎮 3. Create the Toggle Script
+
+Create a new script, e.g., `AnatomyLayerToggle.cs`:
+
+```csharp
+using UnityEngine;
+
+public class AnatomyLayerToggle : MonoBehaviour
+{
+    public GameObject skinLayer;
+    public GameObject muscleLayer;
+    public GameObject skeletonLayer;
+
+    public void ToggleSkin()
+    {
+        if (skinLayer) skinLayer.SetActive(!skinLayer.activeSelf);
+    }
+
+    public void ToggleMuscle()
+    {
+        if (muscleLayer) muscleLayer.SetActive(!muscleLayer.activeSelf);
+    }
+
+    public void ToggleSkeleton()
+    {
+        if (skeletonLayer) skeletonLayer.SetActive(!skeletonLayer.activeSelf);
+    }
+}
+```
+
+---
+
+### 🔗 4. Connect Buttons to Script
+
+1. Create an empty GameObject → name it `LayerManager`
+
+2. Attach the `AnatomyLayerToggle` script to it
+
+3. Assign the `SkinLayer`, `MuscleLayer`, and `SkeletonLayer` objects to their respective fields
+
+4. Select each button and do the following:
+
+   * In the **Button (Script)** component, scroll to **On Click ()**
+   * Click **+** to add a new event
+   * Drag the `LayerManager` into the object field
+   * Select the method to call:
+
+     * `AnatomyLayerToggle → ToggleSkin()` (for ToggleSkinButton)
+     * `AnatomyLayerToggle → ToggleMuscle()` (for ToggleMuscleButton)
+     * `AnatomyLayerToggle → ToggleSkeleton()` (for ToggleSkeletonButton)
+
+---
+
+### ✅ Test It
+
+* Click the buttons in Play mode.
+* Layers will show/hide as expected.
+
+---
+
+## 🧤 For VR: Use 3D Buttons Instead of UI
+
+If you want to use **VR-interactable buttons**:
+
+* Create 3D cubes or panels labeled "Skin", "Muscle", "Skeleton"
+* Add a `XR Grab Interactable` or `XR Simple Interactable`
+* Call the same toggle functions using `UnityEvent` from those
+
+I can help you with that version too — just ask!
+
+---
+
+Would you like animation (e.g., fade in/out) when toggling layers?
+
