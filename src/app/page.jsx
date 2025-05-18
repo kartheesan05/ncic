@@ -626,37 +626,37 @@ export default function Home() {
                 initial="hidden"
                 animate={agendaInView ? "visible" : "hidden"}
               >
-                {[
-                  {
-                    date: "May 18, 2025",
-                    title: "Full Paper Submission Deadline",
-                    description: "Last date to submit your research papers for review",
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                    )
-                  },
-                  {
-                    date: "May 20, 2025",
-                    title: "Intimation of Selected Papers",
-                    description: "Authors will be notified about paper acceptance",
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    )
-                  },
-                  {
-                    date: "May 23, 2025",
-                    title: "Last Date for Registration",
-                    description: "Final deadline for conference registration",
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                      </svg>
-                    )
-                  },
+                                  {[
+                    {
+                      date: "May 23, 2025",
+                      title: "Full Paper Submission Deadline",
+                      description: "Last date to submit your research papers for review",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      )
+                    },
+                    {
+                      date: "Within 24Hrs of submission",
+                      title: "Intimation of Selected Papers",
+                      description: "Authors will be notified about paper acceptance",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      )
+                    },
+                    {
+                      date: "May 24, 2025",
+                      title: "Last Date for Registration",
+                      description: "Final deadline for conference registration",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                        </svg>
+                      )
+                    },
                   {
                     date: "May 26, 2025",
                     title: "Conference Date",
